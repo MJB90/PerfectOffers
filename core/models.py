@@ -1,6 +1,7 @@
 from django.conf import settings
 from django.db import models
 from django.shortcuts import reverse
+from colorfield.fields import ColorField
 
 # Create your models here.
 
@@ -25,6 +26,7 @@ class Item(models.Model):
     url = models.URLField()
     icon = models.CharField(max_length=100)
     slug = models.SlugField()
+    iconcolor = ColorField()
 
     def __str__(self):
         return self.title
