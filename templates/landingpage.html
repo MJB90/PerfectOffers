@@ -1,0 +1,77 @@
+<head>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <!------ Include the above in your HEAD tag ---------->
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            background-size: cover;
+            background-image: url("https://i.ibb.co/xq12qQZ/Adobe-Stock-241431846-e1578596475203-1800x0-c-default.jpg");
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            flex-wrap: wrap;
+            width: 80vw;
+            margin: 0 auto;
+            min-height: 50vh;
+        }
+
+        .btn {
+            flex: 1 1 auto;
+            margin: 10px;
+            padding: 30px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: white;
+            box-shadow: 0 0 20px #eee;
+            border-radius: 10px;
+        }
+
+        /* Demo Stuff End -> */
+
+        /* <- Magic Stuff Start */
+
+        .btn:hover {
+            background-position: right center;
+            /* change the direction of the change here */
+        }
+
+        .btn-1 {
+            background-image: linear-gradient(to right, #f6d365 0%, #fda085 51%, #f6d365 100%);
+        }
+
+        .btn-2 {
+            background-image: linear-gradient(to right, #fbc2eb 0%, #a6c1ee 51%, #fbc2eb 100%);
+        }
+
+        .btn-3 {
+            background-image: linear-gradient(to right, #84fab0 0%, #8fd3f4 51%, #84fab0 100%);
+        }
+
+        .btn-4 {
+            background-image: linear-gradient(to right, #a1c4fd 0%, #c2e9fb 51%, #a1c4fd 100%);
+        }
+
+        .btn-5 {
+            background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 51%, #ffecd2 100%);
+        }
+    </style>
+    <h1 style="color: black; text-align: center; font-family: Verdana, Geneva, Tahoma, sans-serif;">
+        <img src="https://i.ibb.co/tP2rCh8/logo.png">
+    </h1>
+</head>
+<!-- Full Page Image Header with Vertically Centered Content -->
+
+<div class="container">
+    <a class="btn btn-1" href="/customer">Customer</a>
+    <a class="btn btn-2" href="/retailer">Retailer</a>
+    <a class="btn btn-3">Manufacturer</a>
+</div>
