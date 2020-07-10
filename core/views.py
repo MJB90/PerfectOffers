@@ -1,7 +1,8 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import Item, Order, OrderItem
 from .forms import CreateCustomerForm
-from django.views.generic import ListView, DetailView
+from django.core.exceptions import ObjectDoesNotExist
+from django.views.generic import ListView, DetailView, View
 from django.utils import timezone
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
@@ -35,6 +36,22 @@ class HomeView(LoginRequiredMixin, ListView):
     login_url = '/customer_login'
     model = Item
     template_name = "home.html"
+
+
+@method_decorator(customer_only, name='dispatch')
+class OrderSummaryView(LoginRequiredMixin, View):
+    login_url = '/customer_login'
+
+    def get(self, *args, **kwargs):
+        try:
+            order = Order.objects.get(user=self.request.user, ordered=False)
+            context = {
+                'object': order
+            }
+            return render(self.request, 'order_summary.html', context)
+        except ObjectDoesNotExist:
+            messages.error(self.request, "You do not have an active order")
+            return redirect("/")
 
 
 @method_decorator(customer_only, name='dispatch')

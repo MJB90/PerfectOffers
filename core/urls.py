@@ -9,7 +9,8 @@ from .views import (
     CloginPage,
     ClogoutPage,
     CregisterPage,
-    remove_from_cart
+    remove_from_cart,
+    OrderSummaryView
 )
 
 app_name = 'core'
@@ -24,4 +25,5 @@ urlpatterns = [
     path('customer_login/', CloginPage, name="Clogin"),
     path('customer_logout/', ClogoutPage, name="Clogout"),
     path('customer_register/', CregisterPage, name="Cregister"),
+    path('order_summary/', OrderSummaryView.as_view(), name="order-summary")
 ]
