@@ -12,7 +12,24 @@
       <div class="col-md-6 mb-4">
 
         <img src="{{ object.url }}" class="img-fluid" alt="">
-
+        <div>
+          <table class="table table-borderless">
+            <thead>
+            </thead>
+            <tbody>
+              {% for sitem in object.similar_items.all %}
+              <tr>
+                <td><i class="{{ sitem.icon}}" style="font-size:30px ;color: {{ sitem.iconcolor }}">
+                  </i>
+                </td>
+                <td style="font-size:30px ;">${{ sitem.price }}</td>
+                <td><a href="{{ sitem.link }}" style="font-size:25px ; color: blue;">Check
+                    Site</a></td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
       </div>
       <!--Grid column-->
 
@@ -67,6 +84,7 @@
             {{message}}
           </div>
           {% endfor%}
+
           <iframe style="margin-top: 10px;"
             src="https://www.google.com/maps/d/u/0/embed?mid=1ZkELwyts_65BxMrBUWdsXjO0wV_ZsAh9" width="400"
             height="300"></iframe>
@@ -78,10 +96,6 @@
 
     </div>
     <!--Grid row-->
-
-    <hr>
-
-
   </div>
 </main>
 

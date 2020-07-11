@@ -18,6 +18,17 @@ LABEL_CHOICES = (
 )
 
 
+class SimilarItems(models.Model):
+    title = models.CharField(max_length=100)
+    price = models.FloatField()
+    icon = models.CharField(max_length=100)
+    link = models.URLField()
+    iconcolor = ColorField()
+
+    def __str__(self):
+        return self.title
+
+
 class Item(models.Model):
     title = models.CharField(max_length=100)
     price = models.FloatField()
@@ -27,6 +38,7 @@ class Item(models.Model):
     icon = models.CharField(max_length=100)
     slug = models.SlugField()
     iconcolor = ColorField()
+    similar_items = models.ManyToManyField(SimilarItems)
 
     def __str__(self):
         return self.title
