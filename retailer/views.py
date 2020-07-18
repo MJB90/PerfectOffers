@@ -6,14 +6,14 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import Group
 from .decorators import unauthenticated_user, allowed_users, retail_only
-# from bokeh.plotting import figure
-# from bokeh.embed import components
-# from bokeh.models import HoverTool, LassoSelectTool, WheelZoomTool, PointDrawTool, ColumnDataSource
+from bokeh.plotting import figure
+from bokeh.embed import components
+from bokeh.models import HoverTool, LassoSelectTool, WheelZoomTool, PointDrawTool, ColumnDataSource
 
-# from bokeh.palettes import Category20c, Spectral6
-# from bokeh.transform import cumsum
-# from numpy import pi
-# from bokeh.resources import CDN
+from bokeh.palettes import Category20c, Spectral6
+from bokeh.transform import cumsum
+from numpy import pi
+from bokeh.resources import CDN
 # Create your views here.
 
 
@@ -27,30 +27,29 @@ def home(request):
 @login_required(login_url='/login')
 @retail_only
 def dashboard(request):
-    # lang = ['H&M', 'ZARA', 'Levis', 'Pepe Jeans', 'Max', 'HRX']
-    # counts = [25, 30, 8, 22, 12, 17]
+    lang = ['H&M', 'ZARA', 'Levis', 'Pepe Jeans', 'Max', 'HRX']
+    counts = [25, 30, 8, 22, 12, 17]
 
-    # p = figure(x_range=lang, plot_height=450, title="Clothing Brands Popularity",
-    #            toolbar_location="below", tools="pan,wheel_zoom,box_zoom,reset, hover, tap, crosshair")
+    p = figure(x_range=lang, plot_height=450, title="Clothing Brands Popularity",
+               toolbar_location="below", tools="pan,wheel_zoom,box_zoom,reset, hover, tap, crosshair")
 
-    # source = ColumnDataSource(
-    #     data=dict(lang=lang, counts=counts, color=Spectral6))
-    # p.add_tools(LassoSelectTool())
-    # p.add_tools(WheelZoomTool())
+    source = ColumnDataSource(
+        data=dict(lang=lang, counts=counts, color=Spectral6))
+    p.add_tools(LassoSelectTool())
+    p.add_tools(WheelZoomTool())
 
-    # p.vbar(x='lang', top='counts', width=.8,
-    #        color='color', legend="lang", source=source)
-    # p.legend.orientation = "horizontal"
-    # p.legend.location = "top_center"
+    p.vbar(x='lang', top='counts', width=.8,
+           color='color', legend="lang", source=source)
+    p.legend.orientation = "horizontal"
+    p.legend.location = "top_center"
 
-    # p.xgrid.grid_line_color = "black"
-    # p.y_range.start = 0
-    # p.line(x=lang, y=counts, color="black", line_width=2)
+    p.xgrid.grid_line_color = "black"
+    p.y_range.start = 0
+    p.line(x=lang, y=counts, color="black", line_width=2)
 
-    # script, div = components(p)
+    script, div = components(p)
 
-    context = {}
-    return render(request, "retail_dashboard.html", context)
+    return render(request, 'retail_dashboard.html', {'script': script, 'div': div})
 
 
 @login_required(login_url='/login')
