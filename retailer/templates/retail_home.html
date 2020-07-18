@@ -1,5 +1,31 @@
 {% extends "retail_base.html" %}
 
 {% block content %}
-
+<!-- Page Content  -->
+<div id="content" class="p-4 p-md-5 pt-5">
+    <h2 class="mb-4">Hello , {{ request.user }}</h2>
+    <ul>
+        <li>We are building an ecosystem to drive the manufacturer and retailer to understand their
+            consumers/customers
+            better as to provide better personalized offers, deals & exciting experience at the end.
+            The ecosystem will bridge the gap of communication between the retailers & consumers so that the
+            offers
+            reach the consumers at the right time. Every consumer can choose their product preferences and the
+            right
+            offer will be brought to them.</li>
+        <li>
+            Retailers will have access to customer preferences & the recent purchases of customers. This will
+            provide him enough information to curate a personalized offer to bring in new customers as well as
+            build
+            a better relationship with the loyal customers.</li>
+        <li>Manufactures will have access to the customer preferences and buying habits to predict when to
+            provide
+            better offers and when to ship promoted products to retailers. They will also have the information
+            to
+            know how well their products were sold in the market.</li>
+    </ul>
+    <div class="container" style="margin-left: auto; margin-right: auto;">
+        <img src="https://media.giphy.com/media/cmNQVZGJXM7H0DIXQA/giphy.gif">
+    </div>
+</div>
 {% endblock content %}

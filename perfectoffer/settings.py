@@ -20,7 +20,8 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'core',
-    'retailer'
+    'retailer',
+    'chartit',
 ]
 
 MIDDLEWARE = [

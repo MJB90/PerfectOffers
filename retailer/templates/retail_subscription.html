@@ -1,0 +1,64 @@
+{% extends "retail_base.html" %}
+
+{% block content %}
+<!-- Page Content  -->
+<div id="content" class="p-4 p-md-5 pt-5">
+    <h5 class="text-center pricing-table-subtitle">PRICING PLAN</h5>
+    <h1 class="text-center pricing-table-title">Choose your plan</h1>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card pricing-card pricing-plan-basic">
+                <div class="card-body">
+                    <i class="mdi mdi-cube-outline pricing-plan-icon"></i>
+                    <p class="pricing-plan-title">Basic</p>
+                    <h3 class="pricing-plan-cost ml-auto">$30</h3>
+                    <span class="permonth">Per month</span>
+                    <ul class="pricing-plan-features">
+                        <li>Create Offers</li>
+                        <li>View Sales</li>
+                        <li>Send Generic Promotions</li>
+                    </ul>
+                    <a href="/register" class="btn pricing-plan-purchase-btn">Purchase</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card pricing-card pricing-card-highlighted  pricing-plan-pro">
+                <div class="card-body">
+                    <i class="mdi mdi-trophy pricing-plan-icon"></i>
+                    <p class="pricing-plan-title">Pro</p>
+                    <h3 class="pricing-plan-cost ml-auto">$49</h3>
+                    <span class="permonth">Per month</span>
+                    <ul class="pricing-plan-features">
+                        <li>Create Offers</li>
+                        <li>View Sales</li>
+                        <li>Send Generic Promotions</li>
+                        <li>Generate Personalized Promotions</li>
+                        <li>View Customer Buying Trends</li>
+                    </ul>
+                    <a href="/register" class="btn pricing-plan-purchase-btn">Purchase</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card pricing-card pricing-plan-enterprise">
+                <div class="card-body">
+                    <i class="mdi mdi-wallet-giftcard pricing-plan-icon"></i>
+                    <p class="pricing-plan-title">Enterprise</p>
+                    <h3 class="pricing-plan-cost ml-auto">$69</h3>
+                    <span class="permonth">Per month</span>
+                    <ul class="pricing-plan-features">
+                        <li>Create Offers</li>
+                        <li>View Sales</li>
+                        <li>Send Generic Promotions</li>
+                        <li>Generate Personalized Promotions</li>
+                        <li>View Customer Buying Trends</li>
+                        <li>Create Customer Loyalty Programs</li>
+                    </ul>
+                    <a href="/register" class="btn pricing-plan-purchase-btn">Purchase</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

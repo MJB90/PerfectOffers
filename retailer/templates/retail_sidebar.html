@@ -1,86 +1,33 @@
-{% load static %}
-<!doctype html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="{% static 'css/sidebar_style.css' %}">
-</head>
-
-<body>
-
-    <div class="wrapper d-flex align-items-stretch">
-        <nav id="sidebar">
-            <div class="custom-menu">
-                <button type="button" id="sidebarCollapse" class="btn btn-primary">
-                    <i class="fa fa-bars"></i>
-                    <span class="sr-only">Toggle Menu</span>
-                </button>
-            </div>
-            <h1><a href="/" class="logo">Perfect Offer</a></h1>
-            <ul class="list-unstyled components mb-5">
-                <li class="active">
-                    <a href="/retailer"><span class="fa fa-home mr-3"></span> Homepage</a>
-                </li>
-                <li>
-                    <a href="#"><span class="fa fa-user mr-3"></span> Dashboard</a>
-                </li>
-                <li>
-                    <a href="#"><span class="fa fa-sticky-note mr-3"></span> Loyalty Programs</a>
-                </li>
-                <li>
-                    <a href="#"><span class="fa fa-sticky-note mr-3"></span> Subcription</a>
-                </li>
-                <li>
-                    <a href="#"><span class="fa fa-paper-plane mr-3"></span> Settings</a>
-                </li>
-                <li>
-                    <a href="#"><span class="fa fa-paper-plane mr-3"></span> Information</a>
-                </li>
-                <li>
-                    <a href="/logout"><span class="fa fa-user mr-3"></span> Logout</a>
-                </li>
-            </ul>
-
-        </nav>
-
-        <!-- Page Content  -->
-        <div id="content" class="p-4 p-md-5 pt-5">
-            <h2 class="mb-4">Hello , {{ request.user }}</h2>
-            <ul>
-                <li>We are building an ecosystem to drive the manufacturer and retailer to understand their
-                    consumers/customers
-                    better as to provide better personalized offers, deals & exciting experience at the end.
-                    The ecosystem will bridge the gap of communication between the retailers & consumers so that the
-                    offers
-                    reach the consumers at the right time. Every consumer can choose their product preferences and the
-                    right
-                    offer will be brought to them.</li>
-                <li>
-                    Retailers will have access to customer preferences & the recent purchases of customers. This will
-                    provide him enough information to curate a personalized offer to bring in new customers as well as
-                    build
-                    a better relationship with the loyal customers.</li>
-                <li>Manufactures will have access to the customer preferences and buying habits to predict when to
-                    provide
-                    better offers and when to ship promoted products to retailers. They will also have the information
-                    to
-                    know how well their products were sold in the market.</li>
-            </ul>
-            <div class="container" style="margin-left: auto; margin-right: auto;">
-                <img src="https://media.giphy.com/media/cmNQVZGJXM7H0DIXQA/giphy.gif">
-            </div>
-        </div>
+<nav id="sidebar">
+    <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Toggle Menu</span>
+        </button>
     </div>
-    <script src="{% static 'js/jquery.min.js' %}"></script>
-    <script src="{% static 'js/popper.min.js' %}"></script>
-    <script src="{% static 'js/bootstrap.min.js' %}"></script>
-    <script src="{% static 'js/main.js' %}"></script>
-</body>
+    <h1><a href="/" class="logo">Perfect Offer</a></h1>
+    <ul class="list-unstyled components mb-5">
+        <li class="active">
+            <a href="/retailer"><span class="fa fa-home mr-3"></span> Homepage</a>
+        </li>
+        <li>
+            <a href="/dashboard"><span class="fa fa-user mr-3"></span> Dashboard</a>
+        </li>
+        <li>
+            <a href="#"><span class="fa fa-sticky-note mr-3"></span> Loyalty Programs</a>
+        </li>
+        <li>
+            <a href="/subscription"><span class="fa fa-sticky-note mr-3"></span> Subcription</a>
+        </li>
+        <li>
+            <a href="#"><span class="fa fa-paper-plane mr-3"></span> Settings</a>
+        </li>
+        <li>
+            <a href="#"><span class="fa fa-paper-plane mr-3"></span> Information</a>
+        </li>
+        <li>
+            <a href="/logout"><span class="fa fa-user mr-3"></span> Logout</a>
+        </li>
+    </ul>
 
-</html>
+</nav>
