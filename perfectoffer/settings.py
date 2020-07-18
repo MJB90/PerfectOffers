@@ -21,7 +21,6 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'core',
     'retailer',
-    'chartit',
 ]
 
 MIDDLEWARE = [
