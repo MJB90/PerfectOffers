@@ -8,7 +8,8 @@ from colorfield.fields import ColorField
 CATEGORY_CHOICES = (
     ('S', 'Shirt'),
     ('SW', 'Sport wear'),
-    ('OW', 'Outwear')
+    ('OW', 'Outwear'),
+    ('WO', 'Women')
 )
 
 LABEL_CHOICES = (
